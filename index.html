@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1719">
+  <meta name="description" content="Nueve prompts editables de Performance Education para convertir conocimiento de nutrición y entrenamiento en recursos HTML útiles y revisables.">
+  <title>De la pregunta a la herramienta · Performance Education</title>
+  <style>
+    :root{--night:#0b1719;--night2:#132428;--ink:#152322;--paper:#f3f4ed;--white:#fff;--line:#d6dbd1;--muted:#52615c;--mutedlight:#aebdb6;--lime:#c5eb83;--lime2:#e5f4c4;--mint:#a4dfce;--amber:#e4c083;--blue:#a9c9e5;--radius:20px;--max:1240px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input{font:inherit}button{cursor:pointer}a{color:inherit}a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #6d9b42;outline-offset:3px}::selection{background:var(--lime);color:var(--night)}
+    .wrap{max-width:var(--max);margin:auto;padding:0 28px}.skip{position:absolute;left:10px;top:-60px;background:var(--lime);padding:10px;z-index:100}.skip:focus{top:10px}
+    .mast{background:var(--night);color:#f5f8f2;border-bottom:1px solid #30413d}.mast-inner{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:13px;text-decoration:none}.brandmark{display:grid;place-items:center;width:35px;height:35px;border:1px solid #9fc384;border-radius:50%;font-weight:900;letter-spacing:-.12em;color:var(--lime);font-size:17px;padding-right:3px}.brandname{font-size:11px;font-weight:900;letter-spacing:.2em;line-height:1.45}.brandname span{display:block;font-size:9px;font-weight:600;letter-spacing:.12em;color:var(--mutedlight)}.mast nav{display:flex;align-items:center;gap:24px}.mast nav a{text-decoration:none;color:#d1ddd5;font-size:12px;font-weight:700}.mast nav a:hover{color:var(--lime)}.mast .edition{font:700 10px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.12em;border:1px solid #52695d;border-radius:100px;padding:8px 11px;color:var(--lime)}
+    .hero{background:radial-gradient(circle at 78% 35%,#22413b 0%,transparent 35%),linear-gradient(145deg,#0b1719,#14292a 75%);color:#f2f6ee;overflow:hidden}.hero-grid{min-height:560px;display:grid;grid-template-columns:1fr .82fr;align-items:center;gap:7%;padding-top:64px;padding-bottom:70px}.eyebrow{font:800 11px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--lime)}.hero h1{font-size:clamp(54px,6.8vw,100px);line-height:.96;letter-spacing:-.08em;margin:23px 0 25px;max-width:750px}.hero h1 em{font-style:normal;color:var(--lime)}.hero .lead{color:#c1d0c9;max-width:610px;font-size:18px;line-height:1.58;margin:0}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:31px}.btn{border:1px solid transparent;border-radius:999px;padding:12px 18px;font-size:12px;font-weight:850;display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;transition:transform .18s ease,background .18s ease,border-color .18s ease}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--lime);color:#13221a}.btn-primary:hover{background:#d8f5a7}.btn-ghost{border-color:#6a8278;color:#edf3e9;background:transparent}.btn-ghost:hover{border-color:var(--lime)}.hero-note{font:700 10px ui-monospace,SFMono-Regular,Consolas,monospace;color:#91aaa0;letter-spacing:.06em;margin-top:23px}
+    .diagram{position:relative;min-height:370px;display:grid;place-items:center}.diagram:before,.diagram:after{content:"";position:absolute;border:1px solid #426058;border-radius:50%;width:310px;height:310px;transform:rotate(-18deg) scaleX(1.34)}.diagram:after{width:230px;height:230px;border-color:#6b8e72;transform:rotate(23deg) scaleX(1.48)}.orbit{position:absolute;width:380px;height:380px;border:1px dashed #58726466;border-radius:50%}.diagram-core{width:190px;height:190px;background:#c5eb83;color:#183020;border-radius:24px;display:flex;flex-direction:column;justify-content:space-between;padding:20px;box-shadow:0 25px 65px #0005;transform:rotate(-7deg);z-index:1}.diagram-core .small{font:900 11px ui-monospace,monospace;letter-spacing:.1em}.diagram-core strong{font-size:28px;line-height:1;letter-spacing:-.06em}.diagram-core .arrows{font-size:31px;letter-spacing:.2em}.diagram-label{position:absolute;z-index:2;background:#17332f;border:1px solid #5a8571;border-radius:8px;padding:11px 13px;box-shadow:0 10px 25px #0004;font:800 10px ui-monospace,monospace;letter-spacing:.08em}.diagram-label.one{left:0;top:28px;color:var(--mint)}.diagram-label.two{right:0;top:100px;color:var(--amber)}.diagram-label.three{left:3%;bottom:40px;color:var(--blue)}.diagram-label.four{right:1%;bottom:15px;color:var(--lime)}
+    .intro{padding:76px 0 72px;border-bottom:1px solid var(--line)}.section-top{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:30px}.kicker{font:900 10px ui-monospace,monospace;letter-spacing:.15em;color:#54783b;text-transform:uppercase}.section-top h2{font-size:clamp(35px,4vw,57px);letter-spacing:-.065em;line-height:1.04;margin:12px 0 0}.section-top p{max-width:480px;font-size:14px;line-height:1.6;color:var(--muted);margin:0}.process{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fafbf7}.step{padding:23px;min-height:160px;border-right:1px solid var(--line)}.step:last-child{border-right:0}.step .n{font:900 11px ui-monospace,monospace;color:#6f9950}.step h3{font-size:17px;letter-spacing:-.04em;margin:30px 0 7px}.step p{font-size:12px;line-height:1.5;color:var(--muted);margin:0}
+    .library{padding:77px 0 90px}.library-head{display:flex;align-items:flex-end;justify-content:space-between;gap:25px;margin-bottom:28px}.library-head h2{font-size:clamp(38px,4.6vw,64px);letter-spacing:-.07em;line-height:1;margin:12px 0 0}.library-head p{max-width:520px;color:var(--muted);line-height:1.6;font-size:14px;margin:0}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:14px;margin:27px 0 22px}.filter-list{display:flex;flex-wrap:wrap;gap:7px}.filter{border:1px solid #cbd3c6;color:#40534b;background:transparent;border-radius:99px;padding:9px 13px;font-size:11px;font-weight:850}.filter[aria-pressed="true"]{color:#f7fbf3;background:var(--night);border-color:var(--night)}.filter:hover{border-color:#65825d}.searchbox{position:relative;min-width:240px}.searchbox span{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:#65796d}.searchbox input{width:100%;border:1px solid #cbd3c6;background:#fff;border-radius:99px;padding:10px 13px 10px 36px;font-size:12px;color:var(--ink)}.count{font:800 10px ui-monospace,monospace;color:#607369;letter-spacing:.08em;margin-bottom:16px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}.prompt-card{background:#fff;border:1px solid #d5dcd2;border-radius:var(--radius);overflow:hidden;box-shadow:0 12px 35px #1b302308;display:flex;flex-direction:column}.prompt-card[hidden]{display:none}.card-top{padding:23px 24px 17px;flex:1}.card-meta{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:23px}.card-num{font:900 11px ui-monospace,monospace;color:#496b47;letter-spacing:.08em}.pill{border-radius:99px;background:#eef4e5;color:#4c6a48;padding:6px 9px;font:800 10px ui-monospace,monospace;text-transform:uppercase;letter-spacing:.04em}.pill.blue{background:#e7f0f5;color:#406478}.pill.amber{background:#f6efe1;color:#80613e}.pill.mint{background:#e5f4ed;color:#3d7464}.card-top h3{font-size:clamp(22px,2.2vw,29px);letter-spacing:-.055em;line-height:1.1;margin:0 0 11px}.card-top p{font-size:13px;line-height:1.58;color:var(--muted);margin:0 0 18px}.card-foot{font:700 10px ui-monospace,monospace;color:#607067;line-height:1.5}.card-foot b{color:#2f4c3a}.prompt-card details{border-top:1px solid #e0e5dd}.prompt-card summary{list-style:none;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;font-size:12px;font-weight:900;color:#254831;cursor:pointer}.prompt-card summary::-webkit-details-marker{display:none}.prompt-card summary:after{content:"+";font-size:19px;line-height:1;color:#617967}.prompt-card details[open] summary:after{content:"−"}.prompt-body{padding:0 24px 22px}.prompt-body pre{white-space:pre-wrap;overflow-wrap:anywhere;margin:0;background:#f1f4ed;border:1px solid #dae2d4;border-radius:12px;padding:18px;color:#263b31;font:12px/1.64 ui-monospace,SFMono-Regular,Consolas,monospace;max-height:520px;overflow:auto}.prompt-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px}.copy{border:0;background:var(--night);color:#fff;padding:10px 14px;border-radius:8px;font-size:11px;font-weight:900}.copy:hover{background:#335142}.prompt-actions small{color:#64756b;font-size:10px}.no-results{display:none;padding:34px;border:1px dashed #aebcad;border-radius:14px;text-align:center;color:var(--muted)}.no-results.show{display:block}
+    .feature{background:#132625;color:#f5f8ee;padding:72px 0}.feature-grid{display:grid;grid-template-columns:.7fr 1fr;gap:9%;align-items:start}.feature h2{font-size:clamp(36px,4vw,58px);line-height:1;letter-spacing:-.065em;margin:17px 0}.feature p{color:#bdd0c4;font-size:14px;line-height:1.65}.feature .big-num{font:900 88px ui-monospace,monospace;color:var(--lime);line-height:1}.feature .big-num.sequence{font-size:clamp(46px,6vw,78px);letter-spacing:-.1em}.feature-box{background:#203a36;border:1px solid #557367;border-radius:17px;padding:22px 26px}.feature-box h3{font-size:20px;margin:0 0 17px;letter-spacing:-.04em}.feature-box ol{margin:0;padding-left:20px;display:grid;gap:15px}.feature-box li{font-size:13px;line-height:1.55;color:#d5e4db}.feature-box li::marker{color:var(--lime);font-weight:900}.feature .btn{margin-top:22px}.feature .case-note{font:700 10px/1.5 ui-monospace,monospace;color:#a9cbb5;margin-top:19px}
+    .review{padding:80px 0}.review-grid{display:grid;grid-template-columns:.8fr 1fr;gap:9%;align-items:start}.review h2{font-size:clamp(36px,4vw,57px);line-height:1.02;letter-spacing:-.065em;margin:12px 0 17px}.review p{color:var(--muted);font-size:14px;line-height:1.6}.review-list{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:10px 25px}.review-list label{display:flex;align-items:flex-start;gap:13px;padding:16px 0;border-bottom:1px solid #e7eae3;font-size:13px;line-height:1.5;font-weight:650;cursor:pointer}.review-list label:last-child{border:0}.review-list input{width:19px;height:19px;accent-color:#446f3b;margin:1px 0 0;flex:none}.progress{font:800 10px ui-monospace,monospace;letter-spacing:.06em;color:#628154;margin-top:15px}.footer{background:#0b1719;color:#c7d4cb;padding:32px 0}.footer .wrap{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer strong{font:900 11px ui-monospace,monospace;letter-spacing:.18em;color:var(--lime)}.footer p{font-size:11px;margin:0;color:#9aaea2}
+    @media(max-width:920px){.hero-grid{grid-template-columns:1fr;min-height:auto}.diagram{min-height:340px;max-width:500px;width:100%;margin:0 auto}.feature-grid,.review-grid{grid-template-columns:1fr;gap:28px}.section-top,.library-head{align-items:start;flex-direction:column}.process{grid-template-columns:repeat(2,1fr)}.step:nth-child(2){border-right:0}.step:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+    @media(max-width:650px){.wrap{padding:0 17px}.mast-inner{min-height:62px}.mast nav a{display:none}.mast .edition{font-size:9px}.brandname{font-size:9px}.brandname span{font-size:8px}.hero-grid{padding-top:52px;padding-bottom:48px;gap:10px}.hero h1{font-size:clamp(54px,13vw,78px)}.hero .lead{font-size:15px}.diagram{min-height:300px;transform:scale(.8);margin:-25px auto}.diagram-label.one{left:-8px}.diagram-label.two{right:-14px}.diagram-label.three{left:-8px}.diagram-label.four{right:-7px}.intro,.library,.review{padding:58px 0}.process{grid-template-columns:1fr}.step{border-right:0;border-bottom:1px solid var(--line);min-height:0;padding:18px}.step:nth-child(2){border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}.step h3{margin:10px 0 5px}.toolbar{align-items:stretch;flex-direction:column}.filter-list{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}.filter{flex:none}.searchbox{width:100%}.cards{grid-template-columns:1fr}.feature{padding:58px 0}.feature .big-num{font-size:64px}.footer .wrap{align-items:start;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+    @media print{.mast nav,.hero-actions,.diagram,.toolbar,.copy,.feature,.review,.footer,.prompt-actions,.prompt-card summary:after{display:none!important}body{background:#fff}.hero{background:#fff;color:#111}.hero-grid{min-height:0;display:block;padding:15px 0}.hero h1{font-size:40px}.hero h1 em{color:#111}.hero .lead,.hero-note{color:#333}.intro{padding:15px 0}.library{padding:25px 0}.cards{display:block}.prompt-card{box-shadow:none;break-inside:avoid;margin-bottom:15px}.prompt-card details{display:block}.prompt-card details:not([open]) .prompt-body{display:block}.prompt-body pre{max-height:none}a{text-decoration:none}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#biblioteca">Ir a los prompts</a>
+  <header class="mast">
+    <div class="wrap mast-inner">
+      <a class="brand" href="#inicio" aria-label="Performance Education, volver al inicio"><span class="brandmark">P</span><span class="brandname">PERFORMANCE<br>EDUCATION<span>RECURSOS PARA PENSAR Y HACER</span></span></a>
+      <nav aria-label="Navegación principal"><a href="#metodo">El método</a><a href="#biblioteca">Los prompts</a><a href="#revision">Antes de compartir</a><span class="edition">KIT 01 / HTML</span></nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Diseño de Herramientas con IA · Material del curso</div>
+          <h1 id="hero-title">De la pregunta<br>a la <em>herramienta.</em></h1>
+          <p class="lead">Nueve prompts para convertir conocimiento de nutrición y entrenamiento en un HTML que puedas revisar, adaptar y probar. Los últimos tres muestran cómo una guía editorial se convierte en una herramienta móvil.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#biblioteca">Explorar los 9 prompts <span aria-hidden="true">↗</span></a><button class="btn btn-ghost" id="download-all" type="button">Descargar prompts .txt <span aria-hidden="true">↓</span></button></div>
+          <div class="hero-note">INVESTIGAR → ESTRUCTURAR → DISEÑAR → VALIDAR → COMPARTIR</div>
+        </div>
+        <div class="diagram" aria-hidden="true"><div class="orbit"></div><div class="diagram-label one">01 / NECESIDAD</div><div class="diagram-label two">02 / CONTEXTO</div><div class="diagram-label three">03 / INTERACCIÓN</div><div class="diagram-label four">04 / VERIFICACIÓN</div><div class="diagram-core"><span class="small">DISEÑO CON IA</span><strong>Una idea<br>que se puede usar.</strong><span class="arrows">↗ ↘</span></div></div>
+      </div>
+    </section>
+
+    <section class="intro" id="metodo" aria-labelledby="method-title">
+      <div class="wrap">
+        <div class="section-top"><div><div class="kicker">01 / Método de trabajo</div><h2 id="method-title">Primero el problema.<br>Luego el HTML.</h2></div><p>Un buen prompt define a quién ayuda la herramienta, qué debe permitir hacer y cómo se comprobará que funciona. El código es una respuesta a esa definición.</p></div>
+        <div class="process">
+          <div class="step"><span class="n">01 / DEFINIR</span><h3>Situación concreta</h3><p>¿Qué decisión, explicación o registro necesita la persona?</p></div>
+          <div class="step"><span class="n">02 / SUSTENTAR</span><h3>Contexto y fuentes</h3><p>Aporta tus datos, límites, material revisado y lenguaje del público.</p></div>
+          <div class="step"><span class="n">03 / CONSTRUIR</span><h3>Interacción útil</h3><p>Pide una acción real: explorar, comparar, registrar o preparar.</p></div>
+          <div class="step"><span class="n">04 / COMPROBAR</span><h3>Prueba y ajuste</h3><p>Abre el archivo, pulsa cada control y revisa contenido y privacidad.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="library" id="biblioteca" aria-labelledby="library-title">
+      <div class="wrap">
+        <div class="library-head"><div><div class="kicker">02 / Biblioteca editable</div><h2 id="library-title">Nueve puntos de partida.</h2></div><p>Reemplaza el texto entre corchetes con tu propio caso. Los prompts 07–09 forman una secuencia: crear una guía editorial, mejorarla y extraer una herramienta móvil. Se reconstruyeron a partir de nuestro proceso de diseño; no son una transcripción literal de un único prompt.</p></div>
+        <div class="toolbar"><div class="filter-list" role="group" aria-label="Filtrar prompts"><button class="filter" type="button" data-filter="todos" aria-pressed="true">Todos · 9</button><button class="filter" type="button" data-filter="educacion" aria-pressed="false">Educación</button><button class="filter" type="button" data-filter="consulta" aria-pressed="false">Consulta</button><button class="filter" type="button" data-filter="campo" aria-pressed="false">Campo</button><button class="filter" type="button" data-filter="simulacion" aria-pressed="false">Simulación</button><button class="filter" type="button" data-filter="editorial" aria-pressed="false">Caso editorial · 3</button></div><label class="searchbox"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Buscar por tema o uso" aria-label="Buscar prompts"></label></div>
+        <div class="count" id="result-count" aria-live="polite">9 PROMPTS DISPONIBLES</div>
+        <div class="cards" id="cards">
+          <article class="prompt-card" data-category="educacion">
+            <div class="card-top"><div class="card-meta"><span class="card-num">01 / 09</span><span class="pill">Educación</span></div><h3>Una lección, una pantalla</h3><p>Convierte una clase o transcripción en un bloque breve que refuerce las ideas principales sin repetir toda la sesión.</p><div class="card-foot"><b>Necesitas:</b> lección, guion o resumen revisado.</div></div>
+            <details><summary>Ver prompt completo</summary><div class="prompt-body"><pre id="prompt-1">Toma esta lección del curso «Introducción a la IA en nutrición» y conviértela en un bloque HTML de refuerzo para nutriólogos y entrenadores no técnicos.
+
+Irá debajo de un video o audio. Su función es fijar criterio en menos de dos minutos de lectura.
+
+Incluye:
+1. Una idea central.
+2. De cuatro a seis principios, cada uno con título, explicación breve y aplicación profesional.
+3. Una traducción práctica a consulta, entrenamiento o educación.
+4. Una frase final memorable.
+
+Usa HTML semántico y fácil de insertar en una plataforma. Evita párrafos largos, tecnicismos, CSS y formato de artículo. Usa únicamente section, div, h2, h3, p, ul, li, strong y span.
+
+Texto base:
+[PEGAR LECCIÓN O TRANSCRIPCIÓN]</pre><div class="prompt-actions"><button class="copy" type="button" data-copy="prompt-1">Copiar prompt</button><small>Salida: bloque HTML para una clase.</small></div></div></details>
+          </article>
+          <article class="prompt-card" data-category="educacion">
+            <div class="card-top"><div class="card-meta"><span class="card-num">02 / 09</span><span class="pill">Educación</span></div><h3>Infografía viva · 3-6-9</h3><p>De una pregunta fisiológica a una experiencia donde el alumno predice, manipula, observa y explica.</p><div class="card-foot"><b>Necesitas:</b> pregunta de aprendizaje y contenido revisado.</div></div>
+            <details><summary>Ver prompt completo</summary><div class="prompt-body"><pre id="prompt-2">Diseña un HTML interactivo para la sesión educativa «[TEMA]» del sistema 3-6-9.
+
+Pregunta que el alumno debe resolver: [PREGUNTA].
+Fuente o contenido revisado: [PEGAR].
+Público: [NIÑOS / ATLETAS / ENTRENADORES / PACIENTES].
+
+La experiencia debe avanzar así: observar un fenómeno → formular una predicción → cambiar una variable → ver qué ocurre → explicar el mecanismo → tomar una decisión.
+
+Incluye una explicación inicial muy breve, una visualización que cambie de verdad al interactuar, dos preguntas de comprobación y una acción final. Señala qué partes provienen de la fuente y cuáles son simplificaciones didácticas.
+
+Entrega un único HTML con CSS y JavaScript internos, adaptable a celular. Cada control debe funcionar. No inventes resultados científicos ni referencias. Al final, explica cómo comprobaste las interacciones.</pre><div class="prompt-actions"><button class="copy" type="button" data-copy="prompt-2">Copiar prompt</button><small>Salida: infografía interactiva.</small></div></div></details>
+          </article>
+          <article class="prompt-card" data-category="consulta">
+            <div class="card-top"><div class="card-meta"><span class="card-num">03 / 09</span><span class="pill blue">Consulta</span></div><h3>Notas clínicas → plan imprimible</h3><p>Traduce el razonamiento del profesional a un programa de tres páginas, claro para el paciente y listo para PDF.</p><div class="card-foot"><b>Necesitas:</b> notas anonimizadas y decisiones clínicas.</div></div>
+            <details><summary>Ver prompt completo</summary><div class="prompt-body"><pre id="prompt-3">Actúa como generador de HTML clínico SXPIENS. Convierte las notas siguientes en un programa nutricional tamaño carta, listo para imprimir como PDF.
+
+Organiza tres páginas:
+1. Lectura del caso, objetivos, estrategia y días Base · Moderado · Perform.
+2. Implementación diaria, comidas y decisiones antes, durante y después del entrenamiento.
+3. Preparación mínima, kit para imprevistos, reglas de ajuste y seguimiento.
+
+Escribe para el paciente: lenguaje cotidiano, instrucciones concretas y cantidades sólo cuando estén justificadas por los datos. No inventes horarios, diagnósticos, tolerancias ni porciones. Si falta un dato indispensable, escribe «pendiente de definir».
+
+Diseño sobrio y legible, con CSS dentro del archivo, reglas de impresión y sin imágenes externas. No uses JavaScript. Entrega el HTML completo.
+
+Notas del caso:
+[PEGAR NOTAS SIN DATOS IDENTIFICABLES]</pre><div class="prompt-actions"><button class="copy" type="button" data-copy="prompt-3">Copiar prompt</button><small>Salida: HTML imprimible.</small></div></div></details>
+          </article>
+          <article class="prompt-card" data-category="consulta">
+            <div class="card-top"><div class="card-meta"><span class="card-num">04 / 09</span><span class="pill blue">Consulta</span></div><h3>Guía de competencia en 3 capítulos</h3><p>Ordena viaje, alimentación y carrera en una misma ruta para que el atleta sepa qué hacer en cada transición.</p><div class="card-foot"><b>Necesitas:</b> itinerario, plan y alimentos ya probados.</div></div>
+            <details><summary>Ver prompt completo</summary><div class="prompt-body"><pre id="prompt-4">Convierte esta estrategia de nutrición deportiva en una guía HTML para atletas que viajarán y competirán.
+
+Organiza la experiencia en tres capítulos navegables:
+1. Logística: viaje, alojamiento, compras, bolsa de competencia y decisiones que deben quedar resueltas.
+2. Alimentación: comidas conocidas, horarios, hidratación y ajustes según tolerancia.
+3. Día de carrera: secuencia desde el despertar hasta la recuperación.
+
+Muestra una línea de tiempo y listas que se puedan marcar. Si hay dos atletas, conserva una estructura común, pero separa claramente sus diferencias. Usa únicamente alimentos, productos, cantidades y horarios que aparezcan en los datos; deja visible lo que falta confirmar.
+
+Prioriza lectura en celular. El HTML debe ser autónomo, con navegación y casillas funcionales. Revisa que no haya contradicciones entre capítulos antes de entregar el código completo.
+
+Datos y estrategia:
+[PEGAR INFORMACIÓN ANONIMIZADA]</pre><div class="prompt-actions"><button class="copy" type="button" data-copy="prompt-4">Copiar prompt</button><small>Salida: guía móvil de competencia.</small></div></div></details>
+          </article>
+          <article class="prompt-card" data-category="campo" id="fuel-kit">
+            <div class="card-top"><div class="card-meta"><span class="card-num">05 / 09</span><span class="pill amber">Campo</span></div><h3>Fuel Kit × HYROX</h3><p>Diseña un registro para probar combustible en entrenamiento y observar la relación entre momento de consumo y tolerancia.</p><div class="card-foot"><b>Necesitas:</b> decidir qué registrar y cómo comparar sesiones.</div></div>
+            <details><summary>Ver prompt completo</summary><div class="prompt-body"><pre id="prompt-5">Crea un único archivo HTML llamado «Fuel Kit × HYROX» para que un atleta o nutriólogo registre lo que prueba durante una sesión de entrenamiento.
+
+Debe permitir anotar: producto o alimento, cantidad, momento de consumo, duración e intensidad de la sesión, facilidad de uso, síntomas gastrointestinales y comentario libre. Después debe mostrar una línea de tiempo y un resumen de lo que se toleró mejor.
+
+Distingue «dato registrado» de «interpretación». No diagnostiques intolerancias ni recomiendes automáticamente geles, líquidos o sodio. Incluye una vista para comparar dos sesiones y exportar los registros a CSV.
+
+Diseño claro, táctil y usable en celular. Funciona sin servidor ni cuentas. Usa datos ficticios para la demostración y ofrece un botón para borrarlos. Prueba guardar, editar, comparar, exportar y reiniciar; no dejes botones decorativos.</pre><div class="prompt-actions"><button class="copy" type="button" data-copy="prompt-5">Copiar prompt</button><small>Salida: herramienta de registro.</small></div></div></details>
+          </article>
+          <article class="prompt-card" data-category="simulacion">
+            <div class="card-top"><div class="card-meta"><span class="card-num">06 / 09</span><span class="pill mint">Simulación</span></div><h3>Mejorar un simulador existente</h3><p>Convierte una visualización del exposoma en una experiencia donde el alumno compara escenarios y distingue datos de inferencias.</p><div class="card-foot"><b>Necesitas:</b> un HTML inicial y una pregunta clara.</div></div>
+            <details><summary>Ver prompt completo</summary><div class="prompt-body"><pre id="prompt-6">Trabaja sobre el HTML adjunto de VAXA. Inspecciona primero qué funciones ya existen y conserva las que funcionan.
+
+Transfórmalo en un simulador educativo para explorar esta pregunta: «¿Qué cambia cuando un atleta entrena en calor y modificamos la carga?».
+
+El usuario debe poder configurar ambiente, duración, intensidad y tolerancia gastrointestinal; guardar un escenario A, cambiar una o dos variables y compararlo con B. Muestra por separado: variable modificada, respuesta fisiológica plausible, decisión que podría considerarse y dato que aún habría que medir.
+
+Mantén la visualización central y haz que los controles cambien tanto la escena como la explicación. Etiqueta datos ingresados, cálculos, reglas educativas e hipótesis. Nunca presentes una tasa de sudor, un riesgo clínico o una necesidad individual como si se hubieran medido.
+
+Entrega el HTML autónomo completo y una lista breve de pruebas realizadas, incluyendo celular, comparación A/B y datos faltantes.</pre><div class="prompt-actions"><button class="copy" type="button" data-copy="prompt-6">Copiar prompt</button><small>Salida: simulador educativo.</small></div></div></details>
+          </article>
+          <article class="prompt-card" data-category="editorial" id="caso-editorial">
+            <div class="card-top"><div class="card-meta"><span class="card-num">07 / 09 · SECUENCIA 1/3</span><span class="pill mint">Editorial</span></div><h3>Guía editorial personalizada</h3><p>Transforma un resumen clínico estructurado en una guía deportiva A4 de tres páginas, con cronología y decisiones ejecutables.</p><div class="card-foot"><b>Necesitas:</b> contexto trazable de NotebookLM y decisiones validadas.</div></div>
+            <details><summary>Ver prompt completo</summary><div class="prompt-body"><pre id="prompt-7">Actúa como un equipo interdisciplinario integrado por un nutriólogo deportivo basado en evidencia, un diseñador editorial especializado en publicaciones deportivas, un diseñador UX/UI y un desarrollador frontend experto en HTML y CSS.
+
+OBJETIVO
+Transforma la información clínica y deportiva proporcionada en una guía personalizada, útil y visualmente excepcional.
+
+No quiero una dieta genérica ni una aplicación con apariencia de plantilla generada por IA. Quiero un documento editorial que un atleta pueda leer, entender y ejecutar.
+
+FUENTE DE INFORMACIÓN
+Utiliza los datos del paciente, historial, transcripción de consulta y protocolos proporcionados.
+
+Distingue información confirmada, decisiones clínicas y datos pendientes. No inventes fechas, síntomas, porciones ni hábitos.
+
+DIRECCIÓN VISUAL
+- Estética editorial premium inspirada en publicaciones de rendimiento deportivo.
+- Verde noche: #102932
+- Verde petróleo: #006D65
+- Papel marfil: #FBFAF5
+- Acento lima suave: #E0ED98
+- Titulares grandes, tipografía sans serif contundente y jerarquía clara.
+- Abundante espacio en blanco, líneas finas, numeración editorial y cronologías.
+- Evita tarjetas repetitivas, sombras excesivas, emojis e iconos decorativos.
+- Cada página debe tener una identidad propia.
+- No debe parecer una plantilla clínica.
+
+ESTRUCTURA
+Crea exactamente 3 páginas A4 verticales:
+
+PÁGINA 1. CONTEXTO Y PREPARACIÓN
+Portada editorial, situación del atleta, cronología de la última semana y prioridades.
+
+PÁGINA 2. ALIMENTACIÓN Y LOGÍSTICA
+Horarios, comidas familiares, porciones, viaje, lista de compras, digestión e hidratación.
+
+PÁGINA 3. DÍA DE COMPETENCIA
+Línea de tiempo desde despertar hasta recuperación, combustible, plan alternativo y checklist.
+
+CRITERIOS CLÍNICOS
+- Personaliza con alimentos y horarios documentados.
+- Prioriza tolerancia, adherencia, seguridad y ejecución.
+- Incluye alternativas solo cuando resuelven decisiones reales.
+- Mantén advertencias clínicas relevantes.
+- No inventes datos pendientes.
+- Evita afirmaciones fisiológicas injustificadas.
+
+REQUISITOS TÉCNICOS
+- Un único archivo HTML completo.
+- CSS incorporado.
+- Sin dependencias externas indispensables.
+- Diseño responsive para móvil y tablet.
+- @page tamaño A4 vertical.
+- @media print para imprimir exactamente 3 páginas.
+- Conservar colores y evitar cortes de contenido.
+- Botón para imprimir o guardar como PDF.
+- Legibilidad y contraste adecuados.
+
+PROCESO
+Primero identifica las decisiones que el atleta necesita tomar.
+Después organiza el contenido como narrativa visual.
+Finalmente desarrolla el HTML completo.
+
+INFORMACIÓN DEL PACIENTE:
+[PEGAR RESUMEN ESTRUCTURADO DE NOTEBOOKLM CON DATOS FICTICIOS O DESIDENTIFICADOS]
+
+ENTREGA:
+HTML autónomo, listo para abrir, revisar, imprimir y publicar.</pre><div class="prompt-actions"><button class="copy" type="button" data-copy="prompt-7">Copiar prompt</button><small>Salida: guía editorial A4.</small></div></div></details>
+          </article>
+          <article class="prompt-card" data-category="editorial">
+            <div class="card-top"><div class="card-meta"><span class="card-num">08 / 09 · SECUENCIA 2/3</span><span class="pill mint">Editorial</span></div><h3>Auditoría de diseño y lectura</h3><p>Revisa una primera versión sin perder decisiones clínicas; corrige jerarquía, composición y cortes de impresión.</p><div class="card-foot"><b>Necesitas:</b> el HTML del paso 07 y contenido ya validado.</div></div>
+            <details><summary>Ver prompt completo</summary><div class="prompt-body"><pre id="prompt-8">Actúa ahora como director de arte editorial y auditor de experiencia de usuario.
+
+Revisa el HTML que acabamos de crear.
+
+Conserva toda la información clínica validada, pero mejora radicalmente su presentación.
+
+Quiero mayor jerarquía visual, títulos más potentes, composición equilibrada y una narrativa que pueda comprenderse de un vistazo.
+
+No agregues contenido para llenar espacios.
+No conviertas todas las recomendaciones en tarjetas.
+No sacrifiques legibilidad por estética.
+
+Cada página debe responder una pregunta diferente:
+1. ¿Qué hago esta semana?
+2. ¿Qué como y cómo me organizo?
+3. ¿Qué hago el día de competencia?
+
+Respeta exactamente tres hojas A4.
+Revisa cortes de página, tamaño tipográfico, márgenes, densidad de texto y versión móvil.
+
+Corrige lo necesario y entrega el HTML completo actualizado.
+No elimines recomendaciones importantes ni inventes nuevas.</pre><div class="prompt-actions"><button class="copy" type="button" data-copy="prompt-8">Copiar prompt</button><small>Salida: HTML corregido.</small></div></div></details>
+          </article>
+          <article class="prompt-card" data-category="editorial">
+            <div class="card-top"><div class="card-meta"><span class="card-num">09 / 09 · SECUENCIA 3/3</span><span class="pill mint">Editorial</span></div><h3>De la guía a una herramienta móvil</h3><p>Extrae una decisión puntual del documento validado y conviértela en dos estrategias visibles y compartibles desde celular.</p><div class="card-foot"><b>Necesitas:</b> sección validada y datos de productos confirmados.</div></div>
+            <details><summary>Ver prompt completo</summary><div class="prompt-body"><pre id="prompt-9">Convierte una sección de la guía del atleta en una microherramienta HTML mobile-first.
+
+Debe funcionar en una pantalla de celular, ser fácil de capturar y poder compartirse mediante WhatsApp.
+
+Presenta dos estrategias alternativas basadas exclusivamente en los productos y las recomendaciones suministrados.
+
+Cada opción debe mostrar:
+- Nombre del protocolo.
+- Horario o momento de consumo.
+- Producto y cantidad.
+- Carbohidratos y cafeína cuando corresponda.
+- Una instrucción breve de uso.
+- Una advertencia relevante.
+
+Estilo editorial de alto contraste, diseño limpio, números grandes y poco texto.
+
+No uses imágenes externas indispensables.
+No necesitas animaciones ni elementos complejos.
+
+Las dos opciones deben aparecer correctamente incluso si JavaScript no funciona.
+
+El contenido clínico validado no debe cambiarse.
+Entrega un solo HTML autónomo y apto para capturas verticales.</pre><div class="prompt-actions"><button class="copy" type="button" data-copy="prompt-9">Copiar prompt</button><small>Salida: dos estrategias móviles.</small></div></div></details>
+          </article>
+        </div>
+        <p class="no-results" id="no-results">No hay prompts con ese filtro. Prueba otra palabra o categoría.</p>
+      </div>
+    </section>
+
+    <section class="feature" aria-labelledby="feature-title"><div class="wrap feature-grid"><div><div class="eyebrow">03 / Caso aplicado · guía editorial HYROX</div><h2 id="feature-title">Una guía. Tres iteraciones.</h2><p>La guía editorial y las estrategias móviles nacieron de combinar contexto clínico, dirección visual, restricciones técnicas y correcciones. El ejercicio enseña a pasar de fuentes dispersas a instrucciones que el atleta pueda ejecutar.</p><a class="btn btn-primary" href="#caso-editorial" id="open-editorial">Abrir la secuencia 07–09 <span aria-hidden="true">↗</span></a><p class="case-note">DEMOSTRACIÓN CON DATOS FICTICIOS O DESIDENTIFICADOS · LOS PROMPTS SON UNA RECONSTRUCCIÓN DEL MÉTODO</p></div><div class="feature-box"><div class="big-num sequence">07—09</div><h3>NotebookLM → HTML → revisión → móvil</h3><ol><li><strong>Comprender:</strong> organiza fuentes, objetivos, barreras, hábitos, decisiones y datos faltantes en NotebookLM.</li><li><strong>Diseñar:</strong> pega el resumen estructurado en el prompt 07 para crear tres páginas A4.</li><li><strong>Corregir:</strong> usa el prompt 08 para mejorar la narrativa visual sin alterar contenido validado.</li><li><strong>Extraer:</strong> con el prompt 09 convierte una sección en dos estrategias móviles.</li><li><strong>Validar y compartir:</strong> revisa exactitud, porciones, impresión y pantalla antes de generar el PDF o publicar.</li></ol></div></div></section>
+
+    <section class="review" id="revision" aria-labelledby="review-title"><div class="wrap review-grid"><div><div class="kicker">04 / Antes de compartir</div><h2 id="review-title">Un prototipo útil también se revisa.</h2><p>Esta lista acompaña a los nueve prompts. Marca cada punto después de inspeccionar la herramienta terminada. Las casillas se reinician al cerrar la página.</p><div class="progress" id="review-progress" aria-live="polite">0 DE 5 PUNTOS REVISADOS</div></div><div class="review-list" id="review-list"><label><input type="checkbox">La afirmación científica coincide con las fuentes revisadas.</label><label><input type="checkbox">Los ejemplos y datos simulados están identificados como tales.</label><label><input type="checkbox">No se publicaron datos personales ni información clínica identificable.</label><label><input type="checkbox">Todos los controles, enlaces, descargas e impresión funcionan.</label><label><input type="checkbox">Se puede leer y utilizar en un teléfono.</label></div></div></section>
+  </main>
+  <footer class="footer"><div class="wrap"><strong>PERFORMANCE EDUCATION</strong><p>Diseño de Herramientas con IA · Kit de prompts HTML · Material educativo editable</p></div></footer>
+  <script>
+    (() => {
+      const cards = [...document.querySelectorAll('.prompt-card')];
+      const filters = [...document.querySelectorAll('[data-filter]')];
+      const search = document.getElementById('search');
+      const resultCount = document.getElementById('result-count');
+      const noResults = document.getElementById('no-results');
+      let category = 'todos';
+
+      function updateResults() {
+        const query = search.value.trim().toLocaleLowerCase('es');
+        let visible = 0;
+        cards.forEach(card => {
+          const matchesCategory = category === 'todos' || card.dataset.category === category;
+          const matchesText = !query || card.textContent.toLocaleLowerCase('es').includes(query);
+          const show = matchesCategory && matchesText;
+          card.hidden = !show;
+          if (show) visible++;
+        });
+        resultCount.textContent = `${visible} ${visible === 1 ? 'PROMPT DISPONIBLE' : 'PROMPTS DISPONIBLES'}`;
+        noResults.classList.toggle('show', visible === 0);
+      }
+      filters.forEach(button => button.addEventListener('click', () => {
+        category = button.dataset.filter;
+        filters.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+        updateResults();
+      }));
+      search.addEventListener('input', updateResults);
+
+      async function copyText(value) {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(value);
+          return;
+        }
+        const box = document.createElement('textarea');
+        box.value = value;
+        box.style.position = 'fixed';
+        box.style.opacity = '0';
+        document.body.appendChild(box);
+        box.select();
+        const copied = document.execCommand('copy');
+        box.remove();
+        if (!copied) throw new Error('No se pudo copiar');
+      }
+      document.querySelectorAll('[data-copy]').forEach(button => button.addEventListener('click', async () => {
+        const original = 'Copiar prompt';
+        try {
+          await copyText(document.getElementById(button.dataset.copy).textContent.trim());
+          button.textContent = 'Copiado ✓';
+        } catch {
+          button.textContent = 'Selecciona el texto para copiar';
+        }
+        window.setTimeout(() => button.textContent = original, 2600);
+      }));
+
+      document.getElementById('download-all').addEventListener('click', () => {
+        const output = cards.map((card, index) => {
+          const title = card.querySelector('h3').textContent;
+          const prompt = card.querySelector('pre').textContent.trim();
+          return `${String(index + 1).padStart(2, '0')} · ${title}\n\n${prompt}`;
+        }).join('\n\n' + '═'.repeat(60) + '\n\n');
+        const blob = new Blob(['PERFORMANCE EDUCATION · DISEÑO DE HERRAMIENTAS CON IA\nNueve prompts editables para HTML\n\n', output], {type:'text/plain;charset=utf-8'});
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'Performance_Education_9_prompts_HTML.txt';
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+      });
+
+      document.getElementById('open-editorial').addEventListener('click', () => {
+        category = 'todos';
+        search.value = '';
+        filters.forEach(item => item.setAttribute('aria-pressed', String(item.dataset.filter === 'todos')));
+        updateResults();
+        document.querySelector('#caso-editorial details').open = true;
+      });
+      const checks = [...document.querySelectorAll('#review-list input')];
+      const progress = document.getElementById('review-progress');
+      checks.forEach(check => check.addEventListener('change', () => {
+        progress.textContent = `${checks.filter(item => item.checked).length} DE ${checks.length} PUNTOS REVISADOS`;
+      }));
+    })();
+  </script>
+</body>
+</html>
